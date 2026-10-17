@@ -33,3 +33,6 @@
 .signature{font-size:clamp(3.4rem,10vw,8.2rem);line-height:1.65;white-space:nowrap}
 .signature-mask{overflow:visible;display:block;padding:.08em .13em .16em;clip-path:inset(0 100% 0 0)}
 @media(max-width:550px){.signature{font-size:clamp(2.7rem,11.4vw,4.8rem)}.splash-inner{width:96vw}.skip{right:1.3rem}}
+
+/* Never render or animate the introduction again on reload in the same tab. */
+html.intro-seen .splash{display:none!important;animation:none!important;transition:none!important}
