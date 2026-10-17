@@ -64,3 +64,10 @@ html.intro-seen .splash{display:none!important;animation:none!important;transiti
 .expertise-row:nth-child(2) h3{color:#86503D}.expertise-row:nth-child(3) h3{color:#596448}.expertise-row:nth-child(4) h3{color:#795C37}
 @media(max-width:650px){.expertise-row{grid-template-columns:1fr;gap:1.2rem}.expertise-meta{flex-direction:row;align-items:center;gap:1rem}.expertise-note{text-align:right;font-size:.85rem}.expertise-content h3{font-size:clamp(2rem,8vw,3.5rem)}}
 @media(prefers-reduced-motion:reduce){.expertise-mark{transition:none}}
+
+/* A tiny botanical flourish in place of a misleading directional arrow. */
+.expertise-mark{display:inline-grid;place-items:center;flex:none;width:clamp(2rem,3.2vw,3rem);height:clamp(2rem,3.2vw,3rem);border:1px solid currentColor;border-radius:50%;font-family:Georgia,serif;font-size:clamp(1.1rem,1.8vw,1.65rem);line-height:1;color:var(--terra);background:rgba(246,242,233,.35);transform-origin:center;transition:transform .65s cubic-bezier(.2,.8,.2,1),background-color .4s,color .4s}
+.expertise-row:hover .expertise-mark{transform:rotate(90deg) scale(1.08);background:var(--terra);color:var(--ivory)}
+.expertise-row:nth-child(2) .expertise-mark{color:#86503D}.expertise-row:nth-child(3) .expertise-mark{color:#596448}.expertise-row:nth-child(4) .expertise-mark{color:#795C37}
+.expertise-row:nth-child(n):hover .expertise-mark{color:var(--ivory)}
+@media(prefers-reduced-motion:reduce){.expertise-mark{transition:none!important}.expertise-row:hover .expertise-mark{transform:none}}
