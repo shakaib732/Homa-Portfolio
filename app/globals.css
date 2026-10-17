@@ -36,3 +36,8 @@
 
 /* Never render or animate the introduction again on reload in the same tab. */
 html.intro-seen .splash{display:none!important;animation:none!important;transition:none!important}
+
+/* Signature and underline are a single timed gesture. */
+.signature-mask{animation:write 5s cubic-bezier(.38,0,.22,1) both!important}
+.ink-line{animation:ink 5s cubic-bezier(.38,0,.22,1) both!important}
+@media(prefers-reduced-motion:reduce){.signature-mask,.ink-line{animation-duration:.01ms!important}}
